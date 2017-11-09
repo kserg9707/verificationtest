@@ -6,4 +6,34 @@ name - kserg9707
 mail - mymail
 no signification yet, but I want to try from another pc
 ###
+let's test an advice from 2nd googled site
+http://homeonrails.com/2017/01/signing-git-commits/
+gpg --list-secret-keys --keyid-format LONG
+gpg --armor --export <key id>
+
+git config --global user.signingkey <key id>
+git config --global commit.gpgsign true
+git config --global tag.gpgsign true
+
+to avoid password request at each commit:
+echo "default-cache-ttl 28800" >> ~/.gnupg/gpg-agent.conf
+echo "max-cache-ttl 28800" >> ~/.gnupg/gpg-agent.conf
+echo "use-agent" >> ~/.gnupg/gpg.conf
+echo "batch" >> ~/.gnupg/gpg.conf #to avoid message appearing
+
+add to bashrc next:
+'''bash
+# kill -0 checks to see if the pid exists
+if test -f $HOME/.gpg-agent-info && kill -0 `cut -d: -f 2 $HOME/.gpg-agent-info` 2>/dev/null; then
+    GPG_AGENT_INFO=`cat $HOME/.gpg-agent-info | cut -c 16-`
+else
+# No, gpg-agent not available; start gpg-agent
+    eval `gpg-agent --daemon --no-grab --write-env-file $HOME/.gpg-agent-info`
+fi
+export GPG_TTY=`tty`
+export GPG_AGENT_INFO
+'''
+
+let's test...
+###
 
