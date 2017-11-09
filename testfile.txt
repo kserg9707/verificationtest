@@ -6,4 +6,7 @@ name - kserg9707
 mail - mymail
 no signification yet, but I want to try from another pc
 ###
+unverified! need to upload key to github.
+another PC with uploaded key test
+###
 
