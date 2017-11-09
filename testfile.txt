@@ -1,1 +1,9 @@
 1com
+###
+generating gpg key:
+gpg --gen-key
+name - kserg9707
+mail - mymail
+no signification yet, but I want to try from another pc
+###
+
