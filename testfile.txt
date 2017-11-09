@@ -6,6 +6,7 @@ name - kserg9707
 mail - mymail
 no signification yet, but I want to try from another pc
 ###
+<<<<<<< HEAD
 let's test an advice from 2nd googled site
 http://homeonrails.com/2017/01/signing-git-commits/
 gpg --list-secret-keys --keyid-format LONG
@@ -35,5 +36,9 @@ export GPG_AGENT_INFO
 '''
 
 let's test...
+=======
+unverified! need to upload key to github.
+another PC with uploaded key test
+>>>>>>> b8b3e506ba5f1ac6e77957fefcab1b9296735bb6
 ###
 
