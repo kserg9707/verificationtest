@@ -31,7 +31,7 @@ if test -f $HOME/.gpg-agent-info && kill -0 `cut -d: -f 2 $HOME/.gpg-agent-info`
     GPG_AGENT_INFO=`cat $HOME/.gpg-agent-info | cut -c 16-`
 else
 # No, gpg-agent not available; start gpg-agent
-    eval `gpg-agent --daemon --no-grab --write-env-file $HOME/.gpg-agent-info`
+    eval `gpg-agent --daemon --no-grab --write-env-file $HOME/.gpg-agent-info` > /dev/null 2>&1
 fi
 export GPG_TTY=`tty`
 export GPG_AGENT_INFO
@@ -47,5 +47,7 @@ tesi it one more time
 it was working!
 ###
 chmod +x is a good thing
+###
+testing on another machine... fails. bash script needs to be fixed.
 ###
 
