@@ -50,4 +50,7 @@ chmod +x is a good thing
 ###
 testing on another machine... fails. bash script needs to be fixed.
 ###
+I've done something..
+Do I need -s -S now for git commit?
+###
 
