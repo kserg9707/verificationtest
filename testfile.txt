@@ -14,9 +14,10 @@ http://homeonrails.com/2017/01/signing-git-commits/
 gpg --list-secret-keys --keyid-format LONG
 gpg --armor --export <key id>
 
+gpg --list-secret-keys --keyid-format SHORT
 git config --global user.signingkey <key id>
-git config --global commit.gpgsign true
-git config --global tag.gpgsign true
+git config --global commit.gpgSign true
+git config --global tag.gpgSign true #deprecated, I think
 
 to avoid password request at each commit:
 echo "default-cache-ttl 28800" >> ~/.gnupg/gpg-agent.conf
@@ -52,5 +53,7 @@ testing on another machine... fails. bash script needs to be fixed.
 ###
 I've done something..
 Do I need -s -S now for git commit?
+Upd: no! :)
 ###
+alright, fixed option that was at the beginning
 
